@@ -1,0 +1,103 @@
+/* ==UserStyle==
+@name           NSF Streamer Layout
+@namespace      github.com/Assios/userstyles
+@homepageURL    https://raw.githubusercontent.com/Assios/userstyles/master/lichess.nsf-streamer.user.css
+@version        1.0.0
+@description    Based on ornicar's Lichess Streamer Style, but with Norwegian Chess Federation styles.
+@author         github.com/ornicar & github.com/assios
+==/UserStyle== */
+@-moz-document domain("lichess.org") {
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap");
+
+    body {
+        font-family: "Poppins";
+    }
+
+    .blue .is2d cg-board,
+    #top div.color_demo.blue {
+        background-image: url("https://i.imgur.com/DxYsImd.png") !important;
+    }
+
+    .utitle {
+        color: #5477ca;
+        font-weight: semibold;
+    }
+
+    @media (min-width: 800px), (orientation: landscape) {
+        body.dark,
+        body.dark .lobby__app__content,
+        body.dark .box {
+            background: #e6f2ff;
+            color: #bbb;
+        }
+
+        .round__app {
+            grid-template-columns: minmax( calc(70vmin * var(--board-scale)),
+            calc( 100vh * var(--board-scale) - calc(var(--site-header-height) + var(--site-header-margin)) - 3rem)) minmax(240px, 400px);
+            grid-template-rows: 30px 1fr auto min-content auto auto min-content auto 1fr 30px;
+            grid-template-areas: "user-top ." "board ." "board mat-top" "board expi-top" "board moves" "board controls" "board expi-bot" "board mat-bot" "board ." "user-bot ." "kb-move .";
+            margin-top: -0.5em;
+        }
+        .round__app .rclock-top {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        .round__app .rclock-bottom {
+            grid-area: 10 / 1 / 10 / 2;
+        }
+        .round__app .round__app__table {
+            grid-area: 4 / 2 / 6 / 3;
+        }
+        .rclock {
+            /* that weird shit is required so the clock goes above the player since they share the same grid cell */
+            justify-self: flex-end;
+            z-index: 1;
+            background: #cfe0ff;
+
+            font-size: 10px;
+        }
+        .rclock .time {
+            color: #000064;
+            font-family: "Poppins";
+            box-shadow: none;
+            background: #cfe0ff !important;
+        }
+
+        .rclock.running .time {
+            background: #fff !important;
+            color: #000064 !important;
+        }
+
+        .rclock .tour-rank,
+        .rclock .moretime,
+        .rclock .berserked {
+            order: -1;
+        }
+        .rclock .bar {
+            display: none;
+        }
+        .rclock .time {
+            font-size: 2em;
+            line-height: 30px;
+            background: none;
+        }
+        .ruser {
+            padding: 0 0.3em;
+            line-height: 30px;
+        }
+        .ruser rating {
+            color: #98addf;
+        }
+        .ruser a {
+            flex: none;
+            font-weight: bold;
+            color: #000064;
+        }
+        .user-link.online .line {
+            color: #00955f;
+        }
+    }
+
+    #top .site-buttons a[title="Moderation"] {
+        display: none;
+    }
+}
