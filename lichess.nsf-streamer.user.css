@@ -24,9 +24,9 @@
     }
 
     @media (min-width: 800px), (orientation: landscape) {
-        body.dark,
-        body.dark .lobby__app__content,
-        body.dark .box {
+        body,
+        body .lobby__app__content,
+        body .box {
             background: #e6f2ff;
             color: #bbb;
         }
