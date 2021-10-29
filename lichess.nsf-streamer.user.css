@@ -2,7 +2,7 @@
 @name           NSF Streamer Layout
 @namespace      github.com/Assios/userstyles
 @homepageURL    https://raw.githubusercontent.com/Assios/userstyles/master/lichess.nsf-streamer.user.css
-@version        1.0.1
+@version        1.0.2
 @description    Based on ornicar's Lichess Streamer Style, but with Norwegian Chess Federation styles.
 @author         github.com/ornicar & github.com/assios
 ==/UserStyle== */
@@ -23,9 +23,9 @@
     }
 
     @media (min-width: 800px), (orientation: landscape) {
-        body.dark,
-        body.dark .lobby__app__content,
-        body.dark .box {
+        body,
+        body .lobby__app__content,
+        body .box {
             background: #e6f2ff;
             color: #bbb;
         }
