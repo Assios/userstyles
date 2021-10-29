@@ -2,7 +2,7 @@
 @name           NSF Streamer Layout
 @namespace      github.com/Assios/userstyles
 @homepageURL    https://raw.githubusercontent.com/Assios/userstyles/master/lichess.nsf-streamer.user.css
-@version        1.0.0
+@version        1.0.1
 @description    Based on ornicar's Lichess Streamer Style, but with Norwegian Chess Federation styles.
 @author         github.com/ornicar & github.com/assios
 ==/UserStyle== */
@@ -13,9 +13,8 @@
         font-family: "Poppins";
     }
 
-    .blue .is2d cg-board,
-    #top div.color_demo.blue {
-        background-image: url("https://i.imgur.com/DxYsImd.png") !important;
+    cg-board {
+        background-image: url("https://lichess1.org/assets/images/board/ncf-board.png") !important;
     }
 
     .utitle {
@@ -24,9 +23,9 @@
     }
 
     @media (min-width: 800px), (orientation: landscape) {
-        body,
-        body .lobby__app__content,
-        body .box {
+        body.dark,
+        body.dark .lobby__app__content,
+        body.dark .box {
             background: #e6f2ff;
             color: #bbb;
         }
