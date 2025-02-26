@@ -14,4 +14,45 @@
   .is2d cg-board::before {
     background-image: none !important;
   }
+
+  .eval-gauge {
+    background: #f4f4f4 !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  .eval-gauge .black {
+    background: #282828 !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  html.light .eval-gauge[style] {
+    background: #f4f4f4 !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  html.dark .eval-gauge[style] {
+    background: #282828 !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  .eval-gauge::before,
+  .eval-gauge::after {
+    display: none !important;
+  }
+
+  tick {
+    display: none !important;
+  }
 }
