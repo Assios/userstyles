@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name           lichess.org
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document domain("lichess.org") {
+  .is2d cg-board {
+    background-image: url("https://ttt.steinskog.me/board.svg") !important;
+    background-size: cover;
+  }
+  .is2d cg-board::before {
+    background-image: none !important;
+  }
+}
